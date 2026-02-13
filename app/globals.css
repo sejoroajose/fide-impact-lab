@@ -1,0 +1,71 @@
+@import "tailwindcss";
+
+@theme {
+  --color-primary-dark: oklch(0.24 0.04 285);
+  --color-primary: oklch(42.91% 0.148 256.92);
+  --color-border: oklch(0.80 0.03 285);
+  
+  --color-accent-cyan: oklch(0.72 0.14 230);
+  --color-accent-orange: oklch(0.75 0.12 55);
+  --color-accent-gold: oklch(0.84 0.06 85);
+  
+  --color-neutral-light: oklch(0.95 0.01 90);
+  --color-neutral-gray: oklch(0.80 0.03 285);
+
+  --font-heading: var(--font-heading);
+  --font-body: var(--font-body);
+
+  --font-size-xs: 0.8125rem;
+  --font-size-sm: 0.9375rem;
+  --font-size-base: 1.0625rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.625rem;
+  --font-size-2xl: 1.875rem;
+  --font-size-3xl: 2.25rem;
+  --font-size-4xl: 3rem;
+  --font-size-5xl: 3.75rem;
+  --font-size-6xl: 4.5rem;
+  --font-size-7xl: 6rem;
+
+  --radius-sm: 0.625rem;
+  --radius-md: 2.0625rem;
+  --radius-full: 9999px;
+
+  --spacing-section: 3.4375rem;
+}
+
+@layer base {
+  *, ::after, ::before {
+    border-color: var(--color-border);
+  }
+
+  body {
+    @apply font-body text-base text-primary bg-white;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading font-bold;
+  }
+
+  h1 {
+    @apply text-5xl md:text-6xl lg:text-7xl;
+  }
+
+  h2 {
+    @apply text-4xl md:text-5xl;
+  }
+
+  h3 {
+    @apply text-3xl md:text-4xl;
+  }
+
+  h4 {
+    @apply text-2xl md:text-3xl;
+  }
+}
+
+@layer utilities {
+  .container {
+    @apply max-w-7xl mx-auto;
+  }
+}
